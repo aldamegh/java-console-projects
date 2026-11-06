@@ -1,0 +1,16 @@
+build/
+bin/
+*.class
+*.jar
+.metadata/
+.settings/
+.project
+.classpath
+.idea/
+.vscode/
+__pycache__/
+.env*
+*.jks
+*.key
+*.pem
+*.log

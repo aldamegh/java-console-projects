@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Classification</title>
+</head>
+<body>
+    <h1>Text Classification</h1>
+    <form method="POST">
+        <textarea name="text_input" rows="4" cols="50"></textarea><br>
+        <textarea name="text_input" rows="4" cols="50"></textarea><br>
+        <!-- Add more textareas as needed -->
+        <input type="submit" value="Submit">
+    </form>
+    {% if results %}
+        <h2>Results</h2>
+        <ul>
+        {% for text, label in results %}
+            <li><strong>Text:</strong> {{ text }} <br> <strong>Predicted Label:</strong> {{ label }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
