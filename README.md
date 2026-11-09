@@ -1,15 +1,51 @@
-# Java Console Projects
+# Java Coursework Archive and Project Index
 
-Two small coursework applications from Mohammed AlDamegh's early Java projects: an employee manager and an in-memory bank simulation. They demonstrate classes, arrays, searching, and menu-driven console interaction.
+هذا المستودع يجمع نسخة أرشيفية من ملفات الدراسة. المشاريع المختارة لها الآن مستودعات مستقلة موضحة أدناه، مع اسم المادة وتاريخ المشروع الأصلي. تواريخ النشر في GitHub تختلف عن تاريخ إنجاز المشاريع.
 
-The repository also includes a broader [coursework source archive](archive/README.md): Java projects from Eclipse, Python/Jupyter experiments, and Android source fragments. The archive includes unfinished and duplicate variants; it is separate from the two maintained examples below. See the [project catalog](archive/CATALOG.md) for validation results and known limitations.
+This is the legacy source archive. Selected projects are maintained in their own repositories. Original local files remain unchanged.
 
-## Applications
+## Selected standalone projects
 
-| Application | Entry point | Features |
+| Project | Course / المادة | Original project period | Publication |
+| --- | --- | --- | --- |
+| [Bank simulation](https://github.com/aldamegh/java-bank-simulation) | CSC 111 - Computer Programming I | 11-12 December 2020 | Independent repository |
+| [Employee manager](https://github.com/aldamegh/java-employee-manager) | CSC 111 - Computer Programming I | 9-11 December 2020 | Independent repository |
+| [Social network recommender](https://github.com/aldamegh/social-network-recommender) | CSC 212 - Data Structures | May 2022 | Independent repository |
+| [String matching algorithms](https://github.com/aldamegh/string-matching-algorithms) | CSC 311 - Algorithms Design and Analysis | January-February 2023 | Independent repository |
+| [Boolean search engine](https://github.com/aldamegh/boolean-search-engine) | CSC 484 - Information Retrieval | Spring 2024; source saved 6 May | Independent repository |
+| [Naive Bayes spam classifier](https://github.com/aldamegh/naive-bayes-spam-classifier) | CSC 484 - Information Retrieval | Spring 2024; source saved 10 May | Independent repository |
+| [Graduation project: Arabic NLP](https://github.com/aldamegh/turing-test-revisited) | Computer Science Graduation Project; local report labeled CSC 496 | March-May 2024; later cleaning variant saved December 2025 | Existing focused repository |
+
+Original dates above come from surviving source timestamps, ZIP-entry timestamps, and course briefs. A due date is distinguished from a source-save date in each project's README. Publication review and restructuring: **9 November 2026**.
+
+## What the existing archive contains
+
+The original upload contained two reviewed console examples, plus the larger coursework archive; it was not a single course project.
+
+- `bank/src/` and `employees/src/`: reviewed descendants of Eclipse `AldameghFinal` and `AldameghProject`, respectively, from December 2020 (CSC 111).
+- `archive/eclipse/`: **234 Java source files** from **53 nonempty Eclipse project folders**. All 234 were matched against the local Eclipse sources after ignoring comments and the privacy-safe package rename. The original workspace also had seven folders without Java source.
+- `archive/notebooks/`: **56 sanitized notebooks** spanning Boolean search, Naive Bayes variants, Arabic graduation experiments, and medical coursework variants. They include duplicates and incomplete experiments; their [index](archive/NOTEBOOKS.md) records topics.
+- `archive/level-eight/` and `archive/archive-variants/`: additional course-folder/archive source, including Python, Java, Android/Kotlin and configuration fragments. Lecture slides, exams, datasets, and compiled output were excluded.
+
+### Course mapping for the older sources
+
+| Source family | Course/date evidence | Status |
 | --- | --- | --- |
-| Employee manager | `Company` | Add and find employees, calculate example bonuses, find the highest salary within a department |
-| Bank simulation | `TestBank` | Add and remove clients, deposit, withdraw, transfer between clients and banks, display balances |
+| Early Java assignments, labs, bank and employees | CSC 111; local sources span September-December 2020 | Selected bank/employee versions have separate repositories |
+| `PA`, `PA212`, `PA test`, `Project`, `testf` graph variants | CSC 212 friend-recommendation brief; due 17 May 2022, final local variants through 22 May | One reviewed variant selected |
+| `p311`, `project311` | CSC 311 brief, January-February 2023 | Reviewed `project311` variant selected |
+| `227*`, `porject 227`, `project227p2` scheduling variants | CSC 227 - Operating Systems; original files/ZIP span January-February 2023 | Multiple partially working variants; retained as archive |
+| Boolean index/search and spam-classifier sources | CSC 484 project briefs, Spring 2024; selected sources saved in May | Separate reviewed repositories |
+| Arabic article/review/tweet training variants | Graduation project; March-May 2024 source versions, with some later saves | Consolidated in the focused graduation repository |
+| Other tutorials, exams, medical and Android fragments | Folder labels alone do not establish a verified course, date, or individual contribution | Archival; not selected as independent portfolio projects |
+
+Some Eclipse folder names are misleading: a folder labeled as a 2021 programming assignment contains later scheduling code. Course labels were checked against actual source content and surviving briefs rather than applied solely from directory names. Course titles can be checked in the [KSU catalog](https://ccis.ksu.edu.sa/en/cs/cs-prog-guides).
+
+See the [archive catalog](archive/CATALOG.md) for original compilation findings and known defects. Archive code is not covered by the validation of the selected standalone releases.
+
+## Legacy console copies
+
+The two original console copies remain below for compatibility. Use their independent repositories for the reviewed publication versions.
 
 ## Build and run
 
@@ -35,10 +71,9 @@ python check.py
 
 This compiles in temporary storage, runs 38 assertions, and exercises both console menus with synthetic input.
 
-## Scope and provenance
 
-The original source headers credit Mohammed AlDamegh. This publication copy removes student/course identifiers and includes small correctness fixes plus new regression checks; see [CHANGES.md](CHANGES.md). The original local files were preserved. No Eclipse metadata, compiled binaries, real employee records, banking records, or original Git history is included.
+## Privacy and provenance
 
-That authorship statement applies to the two maintained examples. The broader archive can include collaborative work and supplied coursework scaffolding. Individual contributions and upstream provenance have not all been documented; no claim of sole authorship or blanket license is made for the archive.
+Student identifiers, faculty names, machine-specific paths, keystores, raw data, notebook outputs, attachments, compiled files, and IDE history are excluded from the current source tree. A student identifier previously embedded in an archived package path was replaced with `coursework` during this review.
 
-These are educational console examples, not production payroll or banking software. They use fixed-capacity arrays and `double` for example amounts, have no persistence or authentication, and expect correctly typed console input. No additional open-source license is granted by this release.
+The broader archive includes collaborative work and supplied scaffolding, and does not claim that every file was written solely by the repository owner. No blanket open-source license is applied. Original reports, slides, and exam materials remain local.
